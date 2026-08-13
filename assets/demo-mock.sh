@@ -8,7 +8,7 @@ case "$1" in
     echo "added 1 package in 2s"
     echo ""
     echo "  zalo-agent-cli@1.0.31"
-    echo "  https://github.com/PhucMPham/zalo-agent-cli"
+    echo "  https://github.com/trunghoang0501/zalo-agent-cli"
     echo ""
     ;;
   "login")
@@ -24,14 +24,14 @@ case "$1" in
     echo "  ✅ QR scanned! Logging in..."
     sleep 1
     echo "  ✅ Login successful!"
-    echo "  👤 Phuc Minh Pham (0901****67)"
+    echo "  👤 Hung Hoang (0901****67)"
     echo "  💾 Credentials saved to ~/.zalo-agent-cli/"
     echo ""
     ;;
   "status")
     echo ""
     echo "  ✅ Logged in"
-    echo "  👤 Phuc Minh Pham"
+    echo "  👤 Hung Hoang"
     echo "  📱 IMEI: ****-****-****-7f3a"
     echo "  🕐 Session: active (2h 15m)"
     echo ""

@@ -125,7 +125,7 @@ export const Outro: React.FC = () => {
             fontSize: 16,
           }}
         >
-          github.com/PhucMPham/zalo-agent-cli
+          github.com/trunghoang0501/zalo-agent-cli
         </div>
         <div
           style={{

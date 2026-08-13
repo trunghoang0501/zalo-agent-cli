@@ -11,7 +11,7 @@
 [![npm version](https://img.shields.io/npm/v/zalo-agent-cli.svg)](https://www.npmjs.com/package/zalo-agent-cli)
 [![npm downloads](https://img.shields.io/npm/dm/zalo-agent-cli.svg)](https://www.npmjs.com/package/zalo-agent-cli)
 [![npm total downloads](https://img.shields.io/npm/dt/zalo-agent-cli.svg)](https://www.npmjs.com/package/zalo-agent-cli)
-[![license](https://img.shields.io/npm/l/zalo-agent-cli.svg)](https://github.com/PhucMPham/zalo-agent-cli/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/zalo-agent-cli.svg)](https://github.com/trunghoang0501/zalo-agent-cli/blob/main/LICENSE)
 
 Công cụ CLI tự động hóa Zalo — đa tài khoản, proxy, chuyển khoản ngân hàng, thanh toán QR.
 Xây dựng trên [zca-js](https://github.com/RFS-ADRENO/zca-js).
@@ -98,26 +98,26 @@ zalo-agent msg send <THREAD_ID> "Xin chào nhóm!" -t 1
 
 ## Danh sách lệnh
 
-Tất cả lệnh hỗ trợ `--json`. Tài liệu đầy đủ: **[Wiki](https://github.com/PhucMPham/zalo-agent-cli/wiki)**
+Tất cả lệnh hỗ trợ `--json`. Tài liệu đầy đủ: **[Wiki](https://github.com/trunghoang0501/zalo-agent-cli/wiki)**
 
 | Nhóm lệnh | Mô tả | Docs |
 |------------|--------|------|
-| `msg` | Gửi tin nhắn, hình, file, voice, video, sticker, link, thẻ chuyển khoản, QR | [Tin nhắn](https://github.com/PhucMPham/zalo-agent-cli/wiki/Tin-Nh%E1%BA%AFn) |
-| `friend` | Danh sách, tìm, thêm, xóa, chặn, biệt danh, gợi ý | [Bạn bè](https://github.com/PhucMPham/zalo-agent-cli/wiki/B%E1%BA%A1n-B%C3%A8) |
-| `group` | Tạo, đổi tên, thành viên, cài đặt, link, ghi chú, lời mời | [Nhóm & Cộng đồng](https://github.com/PhucMPham/zalo-agent-cli/wiki/Nh%C3%B3m) |
-| `conv` | Tắt thông báo, ghim, lưu trữ, ẩn hội thoại, tự xóa | [Hội thoại](https://github.com/PhucMPham/zalo-agent-cli/wiki/H%E1%BB%99i-Tho%E1%BA%A1i) |
-| `profile` | Xem/cập nhật hồ sơ, ảnh đại diện, quyền riêng tư | [Hồ sơ](https://github.com/PhucMPham/zalo-agent-cli/wiki/H%E1%BB%93-S%C6%A1) |
-| `poll` | Tạo, bỏ phiếu, đóng khảo sát | [Khảo sát](https://github.com/PhucMPham/zalo-agent-cli/wiki/Kh%E1%BA%A3o-S%C3%A1t) |
-| `reminder` | Tạo, sửa, xóa nhắc nhở | [Nhắc nhở](https://github.com/PhucMPham/zalo-agent-cli/wiki/Nh%E1%BA%AFc-Nh%E1%BB%9F) |
-| `auto-reply` | Quản lý trả lời tự động | [Trả lời tự động](https://github.com/PhucMPham/zalo-agent-cli/wiki/Tr%E1%BA%A3-L%E1%BB%9Di-T%E1%BB%B1-%C4%90%E1%BB%99ng) |
-| `quick-msg` | Tin nhắn nhanh đã lưu | [Tin nhắn nhanh](https://github.com/PhucMPham/zalo-agent-cli/wiki/Tin-Nh%E1%BA%AFn-Nhanh) |
-| `label` | Nhãn hội thoại | [Nhãn](https://github.com/PhucMPham/zalo-agent-cli/wiki/Nh%C3%A3n) |
-| `catalog` | zBusiness — danh mục sản phẩm | [zBusiness](https://github.com/PhucMPham/zalo-agent-cli/wiki/zBusiness) |
-| `listen` | Lắng nghe tin nhắn real-time, webhook, lưu JSONL | [Lắng nghe](https://github.com/PhucMPham/zalo-agent-cli/wiki/L%E1%BA%AFng-Nghe) |
-| `account` | Đa tài khoản & proxy | [Tài khoản](https://github.com/PhucMPham/zalo-agent-cli/wiki/T%C3%A0i-Kho%E1%BA%A3n) |
-| **`oa`** | **Zalo Official Account API v3.0 — OAuth, tin nhắn, follower, tag, webhook** | **[Official Account](https://github.com/PhucMPham/zalo-agent-cli/wiki/Official-Account)** |
+| `msg` | Gửi tin nhắn, hình, file, voice, video, sticker, link, thẻ chuyển khoản, QR | [Tin nhắn](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Tin-Nh%E1%BA%AFn) |
+| `friend` | Danh sách, tìm, thêm, xóa, chặn, biệt danh, gợi ý | [Bạn bè](https://github.com/trunghoang0501/zalo-agent-cli/wiki/B%E1%BA%A1n-B%C3%A8) |
+| `group` | Tạo, đổi tên, thành viên, cài đặt, link, ghi chú, lời mời | [Nhóm & Cộng đồng](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Nh%C3%B3m) |
+| `conv` | Tắt thông báo, ghim, lưu trữ, ẩn hội thoại, tự xóa | [Hội thoại](https://github.com/trunghoang0501/zalo-agent-cli/wiki/H%E1%BB%99i-Tho%E1%BA%A1i) |
+| `profile` | Xem/cập nhật hồ sơ, ảnh đại diện, quyền riêng tư | [Hồ sơ](https://github.com/trunghoang0501/zalo-agent-cli/wiki/H%E1%BB%93-S%C6%A1) |
+| `poll` | Tạo, bỏ phiếu, đóng khảo sát | [Khảo sát](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Kh%E1%BA%A3o-S%C3%A1t) |
+| `reminder` | Tạo, sửa, xóa nhắc nhở | [Nhắc nhở](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Nh%E1%BA%AFc-Nh%E1%BB%9F) |
+| `auto-reply` | Quản lý trả lời tự động | [Trả lời tự động](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Tr%E1%BA%A3-L%E1%BB%9Di-T%E1%BB%B1-%C4%90%E1%BB%99ng) |
+| `quick-msg` | Tin nhắn nhanh đã lưu | [Tin nhắn nhanh](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Tin-Nh%E1%BA%AFn-Nhanh) |
+| `label` | Nhãn hội thoại | [Nhãn](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Nh%C3%A3n) |
+| `catalog` | zBusiness — danh mục sản phẩm | [zBusiness](https://github.com/trunghoang0501/zalo-agent-cli/wiki/zBusiness) |
+| `listen` | Lắng nghe tin nhắn real-time, webhook, lưu JSONL | [Lắng nghe](https://github.com/trunghoang0501/zalo-agent-cli/wiki/L%E1%BA%AFng-Nghe) |
+| `account` | Đa tài khoản & proxy | [Tài khoản](https://github.com/trunghoang0501/zalo-agent-cli/wiki/T%C3%A0i-Kho%E1%BA%A3n) |
+| **`oa`** | **Zalo Official Account API v3.0 — OAuth, tin nhắn, follower, tag, webhook** | **[Official Account](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Official-Account)** |
 
-Xem thêm: [Đa tài khoản & Proxy](https://github.com/PhucMPham/zalo-agent-cli/wiki/%C4%90a-T%C3%A0i-Kho%E1%BA%A3n-&-Proxy) · [Cài đặt VPS](https://github.com/PhucMPham/zalo-agent-cli/wiki/C%C3%A0i-%C4%90%E1%BA%B7t-VPS) · [Thẻ chuyển khoản & QR](https://github.com/PhucMPham/zalo-agent-cli/wiki/Th%E1%BA%BB-Chuy%E1%BB%83n-Kho%E1%BA%A3n-&-QR) · [Official Account](https://github.com/PhucMPham/zalo-agent-cli/wiki/Official-Account)
+Xem thêm: [Đa tài khoản & Proxy](https://github.com/trunghoang0501/zalo-agent-cli/wiki/%C4%90a-T%C3%A0i-Kho%E1%BA%A3n-&-Proxy) · [Cài đặt VPS](https://github.com/trunghoang0501/zalo-agent-cli/wiki/C%C3%A0i-%C4%90%E1%BA%B7t-VPS) · [Thẻ chuyển khoản & QR](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Th%E1%BA%BB-Chuy%E1%BB%83n-Kho%E1%BA%A3n-&-QR) · [Official Account](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Official-Account)
 
 ---
 
@@ -194,24 +194,24 @@ zalo-agent msg send <THREAD_ID> "Hello!"   # 4. Send a message
 
 ### Commands
 
-Full docs: **[Wiki](https://github.com/PhucMPham/zalo-agent-cli/wiki)**
+Full docs: **[Wiki](https://github.com/trunghoang0501/zalo-agent-cli/wiki)**
 
 | Group | Description | Docs |
 |-------|-------------|------|
-| `msg` | Text, images, files, voice, video, stickers, links, bank cards, QR | [Messages](https://github.com/PhucMPham/zalo-agent-cli/wiki/Messages) |
-| `friend` | List, find, add, remove, block, alias, recommendations | [Friends](https://github.com/PhucMPham/zalo-agent-cli/wiki/Friends) |
-| `group` | Create, rename, members, settings, links, notes, invites | [Groups](https://github.com/PhucMPham/zalo-agent-cli/wiki/Groups) |
-| `conv` | Mute, pin, archive, hidden, auto-delete | [Conversations](https://github.com/PhucMPham/zalo-agent-cli/wiki/Conversations) |
-| `profile` | Profile, avatar gallery, privacy | [Profile](https://github.com/PhucMPham/zalo-agent-cli/wiki/Profile) |
-| `poll` | Create, vote, lock polls | [Polls](https://github.com/PhucMPham/zalo-agent-cli/wiki/Polls) |
-| `reminder` | Create, edit, remove reminders | [Reminders](https://github.com/PhucMPham/zalo-agent-cli/wiki/Reminders) |
-| `auto-reply` | Auto-reply rules | [Auto-Reply](https://github.com/PhucMPham/zalo-agent-cli/wiki/Auto-Reply) |
-| `quick-msg` | Saved quick messages | [Quick Messages](https://github.com/PhucMPham/zalo-agent-cli/wiki/Quick-Messages) |
-| `label` | Conversation labels | [Labels](https://github.com/PhucMPham/zalo-agent-cli/wiki/Labels) |
-| `catalog` | zBusiness catalogs & products | [Catalog](https://github.com/PhucMPham/zalo-agent-cli/wiki/Catalog) |
-| `listen` | Real-time listener, webhook, JSONL | [Listener](https://github.com/PhucMPham/zalo-agent-cli/wiki/Listener) |
-| `account` | Multi-account & proxy | [Accounts](https://github.com/PhucMPham/zalo-agent-cli/wiki/Accounts) |
-| **`oa`** | **Zalo Official Account API v3.0 — OAuth, messaging, followers, webhook** | **[Official Account](https://github.com/PhucMPham/zalo-agent-cli/wiki/Official-Account)** |
+| `msg` | Text, images, files, voice, video, stickers, links, bank cards, QR | [Messages](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Messages) |
+| `friend` | List, find, add, remove, block, alias, recommendations | [Friends](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Friends) |
+| `group` | Create, rename, members, settings, links, notes, invites | [Groups](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Groups) |
+| `conv` | Mute, pin, archive, hidden, auto-delete | [Conversations](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Conversations) |
+| `profile` | Profile, avatar gallery, privacy | [Profile](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Profile) |
+| `poll` | Create, vote, lock polls | [Polls](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Polls) |
+| `reminder` | Create, edit, remove reminders | [Reminders](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Reminders) |
+| `auto-reply` | Auto-reply rules | [Auto-Reply](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Auto-Reply) |
+| `quick-msg` | Saved quick messages | [Quick Messages](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Quick-Messages) |
+| `label` | Conversation labels | [Labels](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Labels) |
+| `catalog` | zBusiness catalogs & products | [Catalog](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Catalog) |
+| `listen` | Real-time listener, webhook, JSONL | [Listener](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Listener) |
+| `account` | Multi-account & proxy | [Accounts](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Accounts) |
+| **`oa`** | **Zalo Official Account API v3.0 — OAuth, messaging, followers, webhook** | **[Official Account](https://github.com/trunghoang0501/zalo-agent-cli/wiki/Official-Account)** |
 
 ### Support Us
 
@@ -227,7 +227,7 @@ If this tool saves you time, consider buying us a coffee!
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=PhucMPham/zalo-agent-cli&type=Date)](https://star-history.com/#PhucMPham/zalo-agent-cli&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=trunghoang0501/zalo-agent-cli&type=Date)](https://star-history.com/#trunghoang0501/zalo-agent-cli&Date)
 
 ## License
 

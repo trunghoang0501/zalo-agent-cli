@@ -76,7 +76,7 @@ ${mascotImg}
 <p class="brand">QR Code Login</p>
 <img src="data:image/png;base64,${b64}" class="qr-img" alt="QR Code"/>
 <p class="hint">Open <strong>Zalo app</strong> > <strong>QR Scanner</strong> to scan</p>
-<p class="footer">Powered by <a href="https://github.com/PhucMPham/zalo-agent-cli">zalo-agent-cli</a></p>
+<p class="footer">Powered by <a href="https://github.com/trunghoang0501/zalo-agent-cli">zalo-agent-cli</a></p>
 </div>
 <div id="success-view" class="hidden">
 ${mascotImg}
