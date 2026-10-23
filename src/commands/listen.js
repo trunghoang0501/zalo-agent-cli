@@ -7,6 +7,7 @@ import { appendFileSync, mkdirSync, existsSync } from "fs";
 import { resolve, join } from "path";
 import { getApi, autoLogin, clearSession } from "../core/zalo-client.js";
 import { success, error, info, warning } from "../utils/output.js";
+import { dayKey, assertValidTimeZone, DEFAULT_SAVE_TZ } from "../utils/date-dir.js";
 
 /** Thread types matching zca-js ThreadType enum */
 const THREAD_USER = 0;
@@ -44,6 +45,11 @@ export function registerListenCommand(program) {
         .option("--no-self", "Exclude self-sent messages")
         .option("--auto-accept", "Auto-accept incoming friend requests")
         .option("--save <dir>", "Save messages locally as JSONL files (one file per thread, e.g. --save ./zalo-logs)")
+        .option(
+            "--save-daily",
+            "With --save: write into a YYYY-MM-DD subfolder per day (<dir>/<date>/<threadId>.jsonl), created automatically",
+        )
+        .option("--tz <zone>", "IANA timezone used for --save-daily folder dates", DEFAULT_SAVE_TZ)
         .action(async (opts) => {
             const jsonMode = program.opts().json;
             const startTime = Date.now();
@@ -73,19 +79,47 @@ export function registerListenCommand(program) {
 
             // Setup save directory if --save flag provided
             let saveDir = null;
+            const saveDaily = Boolean(opts.saveDaily);
+            if (saveDaily && !opts.save) {
+                error("--save-daily requires --save <dir>");
+                process.exit(1);
+            }
+            if (saveDaily) {
+                try {
+                    assertValidTimeZone(opts.tz);
+                } catch {
+                    error(`Invalid --tz timezone: ${opts.tz}`);
+                    process.exit(1);
+                }
+            }
             if (opts.save) {
                 saveDir = resolve(opts.save);
                 if (!existsSync(saveDir)) mkdirSync(saveDir, { recursive: true });
                 info(`Saving messages to: ${saveDir}`);
             }
 
+            /** Last daily folder known to exist — avoids a mkdir call on every event */
+            let lastDailyDir = null;
+
+            /** Resolve the folder for an event saved at `now` (daily subfolder when --save-daily) */
+            function resolveSaveDir(now) {
+                if (!saveDaily) return saveDir;
+                const dir = join(saveDir, dayKey(now, opts.tz));
+                if (dir !== lastDailyDir) {
+                    mkdirSync(dir, { recursive: true });
+                    lastDailyDir = dir;
+                }
+                return dir;
+            }
+
             /** Append event to JSONL file (one file per threadId) */
             function saveEvent(data) {
                 if (!saveDir || !data.threadId) return;
+                const now = new Date();
                 const filename = `${data.threadId}.jsonl`;
-                const filepath = join(saveDir, filename);
-                const line = JSON.stringify({ ...data, savedAt: new Date().toISOString() }) + "\n";
+                const line = JSON.stringify({ ...data, savedAt: now.toISOString() }) + "\n";
                 try {
+                    const filepath = join(resolveSaveDir(now), filename);
                     appendFileSync(filepath, line, "utf-8");
                 } catch (e) {
                     console.error(`[listen] Save failed: ${e.message}`);
@@ -269,7 +303,13 @@ export function registerListenCommand(program) {
                 info("Auto-reconnect enabled.");
                 if (opts.filter !== "all") info(`Message filter: ${opts.filter}`);
                 if (opts.webhook) info(`Webhook: ${opts.webhook}`);
-                if (saveDir) info(`Save dir: ${saveDir} (JSONL per thread)`);
+                if (saveDir) {
+                    info(
+                        saveDaily
+                            ? `Save dir: ${saveDir}/<YYYY-MM-DD>/ (JSONL per thread, daily folders in ${opts.tz})`
+                            : `Save dir: ${saveDir} (JSONL per thread)`,
+                    );
+                }
                 if (opts.autoAccept) info("Auto-accept friend requests: ON");
             } catch (e) {
                 error(`Listen failed: ${e.message}`);
